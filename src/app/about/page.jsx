@@ -1,3 +1,5 @@
+import { getServerSession } from "next-auth";
+import { authOptions } from "../api/auth/[...nextauth]/route";
 
 export const metadata = {
     title: "About",
@@ -13,7 +15,8 @@ const getTime = async () =>{
 }
 
 const page = async () => {
-
+    const session = await getServerSession(authOptions)
+    console.log('abt',{session})
     const currentTime = await getTime()
     return (
         <div>

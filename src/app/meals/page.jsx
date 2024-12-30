@@ -2,7 +2,6 @@
 import Meals from "@/components/Meals";
 
 
-
 const MealPage = () => {
     
     return (
